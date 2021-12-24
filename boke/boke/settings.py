@@ -74,10 +74,14 @@ WSGI_APPLICATION = 'boke.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+'default': {
+        'ENGINE': 'django.db.backends.mysql',  # 默认
+        'NAME': 'boke',  # 连接的数据库
+        'HOST': '127.0.0.1',  # mysql的ip地址
+        'PORT': 3306,  # mysql的端口
+        'USER': 'boke',  # mysql的用户名
+        'PASSWORD': '123456'  # mysql的密码
+    },
 }
 
 
